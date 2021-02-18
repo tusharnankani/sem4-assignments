@@ -16,8 +16,12 @@ void insertionSort(vector<int> a)
             i -= 1;
         }
         a[i + 1] = key;
+        cout << "Iteration " << j << ": ";
+        for(auto it: a)
+            cout << it << " ";
+        cout << endl;
     }
-    cout << "After Insertion Sort: ";
+    cout << "\nAfter Insertion Sort: ";
     for(auto it: a)
         cout << it << " ";
     cout << endl;
@@ -29,7 +33,7 @@ int main()
     cout << "Enter the length of the array: ";
     cin >> n;
     vector<int> a(n);
-    cout << "Enter " << n << " elements: \n";
+    cout << "Enter " << n << " elements: ";
     for(int i = 0; i < n; ++i) {
         cin >> a[i];
     }
