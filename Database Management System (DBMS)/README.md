@@ -3,3 +3,5 @@
 ## Extended Entity Relationship (EER) Diagram
 
 ![](Airport_Management_System_EER.png)
+
+![](Relational_Schema.png)
