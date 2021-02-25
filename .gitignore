@@ -34,3 +34,4 @@
 .vscode
 
 *.jovianarc
+.ipynb_checkpoints
