@@ -33,5 +33,5 @@
 
 .vscode
 
-*.jovianarc
+.jovianrc
 .ipynb_checkpoints
