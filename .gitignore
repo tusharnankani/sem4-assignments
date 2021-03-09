@@ -31,7 +31,12 @@
 *.out
 *.app
 
+# VSCode
 .vscode
 
+# ipynb
 .jovianrc
 .ipynb_checkpoints
+
+# Java
+*.class
