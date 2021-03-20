@@ -37,6 +37,7 @@
 # ipynb
 .jovianrc
 .ipynb_checkpoints
+__pycache__
 
 # Java
 *.class
