@@ -17,10 +17,13 @@ def save_file():
 
 def clear_file():
     '''clears the input field '''
+    name_var.set("")
     text.delete(1.0, END)
 
 def print_in_cmd():
     '''prints the file in terminal'''
+    print("Title:", name_var.get())
+
     print(str(text.get(1.0, END)))
 
     # Shows info box if file printed in the terminal;
@@ -35,26 +38,39 @@ root = Tk()
 # root window title and dimension
 root.title("Welcome to File Editor")
 # Set geometry (widthxheight)
-root.geometry('1000x500')
+root.geometry('1200x550')
+
+name_var=StringVar()
+# creating a label for TITLE using widget Label
+Label(root, text = 'TITLE', font=('calibre',14, 'bold')).place(x=30, y=70)
+Entry(root, textvariable = name_var, font=('calibre',13,'normal')).place(x=30, y=110)
 
 # Text Input
-text=Text(root, x=30, y=10, padx = 10, pady = 10, wrap=WORD)
+text=Text(root, x=30, y=40, padx = 10, pady = 10, wrap=WORD)
 text.pack()
-
 
 # adding a label to the root window
 lbl = Label(root, text = "File Editor")
 
 # Text to display where to enter text
-Label(root, text="Enter Text: ").place(x=100, y=200, anchor="center")
+Label(root, text="Enter Text: ", font=('calibre', 15, 'bold')).place(x=180, y=220, anchor="center")
 
-# button widget with red color text inside
-btn = Button(root, text = "Save File", fg = "blue", command=save_file)
+
+# button widget with blue color text inside
+btn = Button(root, text = "Update", fg = "blue", command=save_file)
 btn.place(x = 350, y = 450)
 
-# button widget with red color text inside
-btn = Button(root, text = "Print File on Terminal", fg = "blue", command=print_in_cmd)
-btn.place(x = 550, y = 450)
+# button widget with blue color text inside
+btn = Button(root, text = "Print", fg = "blue", command=print_in_cmd)
+btn.place(x = 475, y = 450)
+
+# button widget with blue color text inside
+btn = Button(root, text = "Clear", fg = "blue", command=clear_file)
+btn.place(x = 600, y = 450)
+
+# button widget with blue color text inside
+btn = Button(root, text = "Delete", fg = "red", command=clear_file)
+btn.place(x = 725, y = 450)
 
 # menu bar at the top
 menubar=Menu(root)
