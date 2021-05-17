@@ -1,0 +1,82 @@
+<!-- {% load static %} -->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Database Details</title>
+		<!-- <link rel="stylesheet" href="{% static 'css/' %}" /> -->
+		<style>
+			@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap");
+
+			body {
+				color: #39424e;
+				padding-bottom: 2.5rem;
+				font-family: "Montserrat", Sans-Serif;
+			}
+			table {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				border-collapse: collapse;
+				margin: 25px 0;
+				font-size: 0.9em;
+				border-radius: 5px 5px 0 0;
+				box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+			}
+
+			table thead tr {
+				background-color: #ffffff;
+				color: #000000;
+				text-align: left;
+				font-weight: bold;
+			}
+
+			table th,
+			table td {
+				padding: 12px 15px;
+			}
+
+			table tbody tr {
+				border-bottom: 1px solid #dddddd;
+			}
+
+			i {
+				font-size: 1.25rem;
+			}
+
+			tr:hover {
+				background-color: rgba(214, 230, 243, 0.493);
+				opacity: 0.95;
+				font-weight: 1.3rem;
+			}
+
+			main {
+				display: grid;
+				width: 100vw;
+				place-content: center;
+			}
+		</style>
+	</head>
+	<body>
+		<table>
+			<tr>
+				<th>Name</th>
+				<th>Roll Number</th>
+				<th>Semester</th>
+				<th>Division</th>
+				<th>Department</th>
+			</tr>
+			{% for stud in students %}
+			<tr>
+				<td>{{stud.name}}</td>
+				<td>{{stud.roll_no}}</td>
+				<td>{{stud.semester}}</td>
+				<td>{{stud.division}}</td>
+				<td>{{stud.department}}</td>
+			</tr>
+			{% endfor %}
+		</table>
+	</body>
+</html>
