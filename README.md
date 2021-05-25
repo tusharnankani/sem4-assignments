@@ -12,11 +12,11 @@ Ctrl V
 
 ### Table of Contents
 
-- [AOA]
-- [DBMS]
-- [MP]
-- [OS]
-- [Python]
+- [AOA](#ananlysis-of-algorithms-aoa)
+- [DBMS](#database-management-system-dbms)
+- [MP](#microprocessor)
+- [OS](#operating-system)
+- [Python](#python)
 
 ### [Ananlysis of Algorithms (AOA)](https://github.com/tusharnankani/sem4-assignments/tree/main/Analysis%20of%20Algorithms%20(AOA))
 
